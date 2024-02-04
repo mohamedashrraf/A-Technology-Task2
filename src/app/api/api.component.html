@@ -1,0 +1,62 @@
+<html lang="en" dir="ltr">
+  <div class="table-container">
+    <div class="table-view mt-5">
+      <div class="inner">
+        <!-- Start Table Primeng -->
+        <div class="card">
+          <p-table
+            class="m-auto"
+            [value]="customers"
+            [paginator]="true"
+            [rows]="8"
+            selectionMode="single"
+            [resizableColumns]="false"
+            [showCurrentPageReport]="true"
+            [tableStyle]="{ 'min-width': '50rem' }"
+            currentPageReportTemplate="Display {first} from {totalRecords}"
+            [rowsPerPageOptions]="[4, 8, 10, 20, 50]"
+          >
+            <ng-template pTemplate="header" let-columns>
+              <tr class="text-center flex-start">
+                <th>countryName</th>
+                <th>flag</th>
+                <th>alpha3Code</th>
+                <th>currency</th>
+                <th>symbol</th>
+                <th>currencyCode</th>
+                <th>currencyId</th>
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-customers>
+              <tr class="text-center">
+                <td class="text-center">
+                  <div class="d-flex">
+                    <div class="d-flex flex-column">
+                      <div class="cust-name">
+                        {{ customers.countryName }}
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td class="text-center">{{ customers.flag }}</td>
+
+                <td class="text-center">{{ customers.alpha3Code }}</td>
+
+                <td class="text-center">
+                  {{ customers.currency }}
+                </td>
+
+                <td class="text-center cinema">
+                  {{ customers.symbol }}
+                </td>
+                <td class="text-center">{{ customers.currencyCode }}</td>
+
+                <td class="text-center">{{ customers.currencyId }}</td>
+              </tr>
+            </ng-template>
+          </p-table>
+        </div>
+      </div>
+    </div>
+  </div>
+</html>

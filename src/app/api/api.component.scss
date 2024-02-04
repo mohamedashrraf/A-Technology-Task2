@@ -1,0 +1,341 @@
+::ng-deep .table-container {
+  width: 1069px;
+  height: 410px;
+  flex-shrink: 0;
+  border-radius: 6px 0px 6px 6px;
+  margin: 100px 339px 14px auto;
+}
+
+::ng-deep .table-view {
+  margin: 100px auto;
+
+}
+
+::ng-deep .table-view .inner {
+  padding: 10px;
+}
+
+::ng-deep .card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+::ng-deep p-table {
+  width: 100%;
+}
+
+::ng-deep .tableTitle {
+  background-color: #f0f0f0;
+}
+
+::ng-deep .text-center {
+  text-align: center;
+}
+
+::ng-deep .d-flex {
+  display: flex;
+}
+
+::ng-deep .ms-2 {
+  margin-left: 2px;
+}
+
+::ng-deep .cust-name {
+  font-weight: bold;
+}
+
+::ng-deep .cust-phone {
+  color: #555;
+}
+
+::ng-deep .overlay {
+  position: relative;
+}
+
+::ng-deep .overlay img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+::ng-deep .overlay-sub {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
+}
+
+::ng-deep .cinema {
+  color: #888;
+}
+
+::ng-deep [tooltipPosition="top"]::ng-deep .ui-tooltip {
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.rowTable {
+  border: 1px solid #999;
+}
+
+
+
+
+
+
+// ::ng-deep.table-container-head {
+
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+// }
+
+// ::ng-deep .table-container .table-container-head .right-side {
+//   display: flex;
+//   align-items: center;
+// }
+
+// ::ng-deep .table-container .table-container-head .right-side .icon {
+//   width: 36px;
+//   height: 36px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   border: 0.75px solid #92A1AD66;
+//   border-radius: 7.5px;
+//   margin: 0px 5px;
+//   cursor: pointer;
+// }
+
+// ::ng-deep .table-container .table-container-head .right-side .icon:hover {
+//   background: #c5cdd366;
+//   border: 0.75px solid #92A1AD66;
+// }
+
+// ::ng-deep .table-container .table-container-head .left-side {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+// }
+
+// ::ng-deep .table-container .table-container-head .left-side .toggle {
+//   display: flex;
+//   align-items: center;
+// }
+
+// ::ng-deep .toggle-parent {
+//   display: flex;
+//   align-items: center;
+// }
+
+// ::ng-deep .toggle-text {
+//   margin-left: 7px;
+//   margin-right: 7px;
+//   font-size: 14px;
+//   font-weight: 400;
+//   color: #9c9d9f;
+// }
+
+// ::ng-deep .table-container .table-container-head .left-side .button {
+//   display: flex;
+//   align-items: center;
+// }
+
+// ::ng-deep .btn-task {
+//   background-color: #0771DE;
+//   color: #fff;
+//   cursor: pointer;
+//   margin-right: 7px;
+// }
+
+// ::ng-deep .btn-task:hover {
+//   background-color: #0771DE;
+
+// }
+
+// ::ng-deep .table-container .table-view {
+//   height: 319px;
+// }
+
+
+
+// ::ng-deep .tableTitle{
+//  background-color: #F8F8F9;
+//  color: #85848B;
+//  padding: 90px;
+// }
+
+
+// ::ng-deep .table-container .table-view .inner .overlay {
+//   position: relative;
+//   overflow: hidden;
+// }
+
+// ::ng-deep .table-container .table-view .inner .overlay .overlay-sub {
+//   position: absolute;
+
+//   color: #fff;
+//   top: 0;
+//   bottom: 0;
+//   right: 0;
+//   left: 0;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   font-size: 11.6px;
+// }
+
+// ::ng-deep tr th {
+//   text-align: center;
+//   font-size: 13px;
+//   color: #ABAAB1;
+// }
+
+// ::ng-deep .card {
+//   width: 100%;
+// }
+
+// ::ng-deep tr td {
+//   font-size: 14px;
+//   font-weight: 400;
+//   font-family: 'Neo Sans Arabic', sans-serif;
+// }
+
+// ::ng-deep .cust-name {
+//   font-size: 12px;
+//   font-weight: 500;
+//   margin-bottom: 3px;
+// }
+
+// ::ng-deep .cust-phone {
+//   font-size: 9.9px;
+//   color: #92A1AD;
+//   font-weight: 400;
+// }
+
+// ::ng-deep .ticketInfo {
+//   display: flex;
+// }
+
+// ::ng-deep .ticketInfo img {
+//   cursor: pointer;
+// }
+
+// ::ng-deep .ticketInfo img:hover {
+//   color: #0771DE;
+// }
+
+// ::ng-deep .ticketData {
+//   margin-left: 8px;
+//   margin-right: 8px;
+//   align-items: center;
+// }
+
+// ::ng-deep .ticketDetails {
+//   display: flex;
+//   justify-content: center;
+//   font-size: 10px;
+//   color: gray;
+// }
+
+// ::ng-deep .t-0 {
+//   margin-top: 5px;
+//   margin-left: 5px;
+//   margin-right: 5px;
+//   cursor: pointer;
+//   font-weight: 500;
+
+// }
+
+// ::ng-deep .t-0:hover {
+//   color: red;
+// }
+
+// ::ng-deep .cinema {
+//   cursor: pointer;
+// }
+
+/* Media Query for Mobile View Mobile (300px - 767px): */
+@media only screen and (max-width: 767px) {
+  .table-container .table-container-head {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .table-container .table-container-head .left-side {
+    margin-top: 5px;
+    width: 75%;
+    display: flex;
+    justify-content: start;
+    height: 100px;
+  }
+
+  .toggle-parent {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+  }
+
+  .card {
+    width: 330px;
+  }
+
+  .table-container .table-container-head .right-side {
+    flex-direction: row;
+    width: 90%;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .table-container .table-container-head .left-side {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    justify-content: center;
+    margin: auto;
+  }
+}
+
+/* Media Query for Mobile View  Tablet (768px - 1023px): */
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  ::ng-deep .table-container .table-container-head {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .table-container .table-container-head .right-side {
+    width: 70%;
+  }
+
+  .table-container .table-container-head .left-side {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 2000px) {
+  .table-container .table-container-head {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .table-container .table-container-head .right-side {
+    display: flex;
+    align-items: center;
+  }
+}

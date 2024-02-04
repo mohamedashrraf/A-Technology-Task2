@@ -1,0 +1,29 @@
+.header{
+  width: 1067px;
+    height: 116px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    margin: 77px 340px 0px 33px;
+    background: rgb(255, 255, 255);
+      background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 250, 69, 0.26943277310924374) 30%, rgba(255, 255, 255, 0.6139705882352942) 59%, rgba(255, 255, 255, 1) 92%);
+}
+
+.header h2{
+  color: #1C1C28;
+    font-family: Almarai;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 39px 30px 8px auto;
+}
+.header p{
+  color: #9C9D9F;
+    font-family: Almarai;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    margin: 0px 22px 37.75px auto;
+}
+

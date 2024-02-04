@@ -1,0 +1,46 @@
+//PARENT TO CHILD
+  //عشان ابعت حاجة من الاب للابن زي البوستات اللي هيلف عليها ويعرضها في الكارد بعمل
+  //1 [postItem]="post"  في فايل الاب الاتشتيامال postItem الداتا اللي عايز ابعتها وتبقي بنفس الاسم في فايل التايب في الابن  - post القيمة اللي واخدها من ال ngfor من الاب
+  //2 @Input() postItem!: Post; في فايل الابن التايبسكريبت
+  //3 {{ postItem.خاصية }} في فايل الابن الاتشتيامال نحط اللي عايزين نعرضه بنفس الاسم اللي خدناه من الاب
+
+  @Input() postItem!: Post; // ! عشان محطش initial value postItem خدتها من الاب html
+
+
+  //CHILD TO PARENT
+  //عشان ابعت من الابن للاب لازم يحصل event
+  //1 (click)="sendToParent(postItem.id)" في فايل الابن الاتشتيامال نكتبها جوا الزرار او اللي المكان اللي عايز اشغل بيه الحدث
+  //2 sendToParent(id: number) {    }  في فايل التايبسكريبت في الابن اكتب بودي الفانكشن اللي عايز انفذها
+  //   @Output() sendPostId = new EventEmitter<number>(); نعرف بروبيرتي من نوع EventEmitter ده المسؤل عن انه يبعت الداتا من الابن للاب ولازم عشان يتم ده يحصل event و sendPostId بيتحط جوا ()في الاتشتيامال بتاع الاب
+  //3 (sendPostId)="receivedFromChild($event)" في فايل اتشتيامال الاب بناخد الاوتبوت اللي عرفته في الابن وشايل قيمة اللي باعته للاب جوا () ولما يجي يشغل الفانكشن اللي فيها ايفنت
+  //4   receivedFromChild(id : any){   } في فايل التايبسكريبت بتاع الاب ننفذ بودي ابلفانكشن تاخد ال id اللي جه من الابن وتحطه في المكان اللي انا عايزه زي العنوان وياخد انتروليشن عشان يتعرض
+
+  // الاقواس اللي علي الشمال زي [postItem] - (sendPostId) بتكون خاصة بالابن واللي علي اليمين خاص بالاب زي "post" - "receivedFromChild($event)"
+
+  @Output() sendPostId = new EventEmitter<number>();
+
+  sendToParent(id: number) {
+    console.log("CHILD",id);
+    this.sendPostId.emit(id)  //تنفذ الايفنت وتبعت ال value للاب
+  }
+
+//////////////////////////////////////////////////////////////////////
+- ? علامة استمهام اسمها safe navigation operator بعرف بيها متغير ممكن يجيلي او لا
+- ! تخليني اعرف العناصر من غير ما اديها initial value
+
+Angular Hooks component lifecycle
+- constructor() نعرف فيه ال services اللي هيستخدمها ونحط قيم للعناصر اللي معرفها
+- ngOnchanges() تراقب تغييرات الانبوت تحصل في اي وقت في مراحل الكمبوننت
+- *** ngOnInit() اول ما يبدا الكمبوننت انسب مكان لفيتش ال api
+- ngDoCheck() زي ال ngOnchanges مينفعش تتحط وهي موجودة change detection تشتغل اكتر من مرة مش مرة واحدة زي الباقيين
+- ngAfterContentInit()   // contentChild is set after the content has been initialized
+- ngAfterContentChecked()
+- *** ngAfterViewInit() لما الكمبوننت يشتغل بالكامل
+                        لو انا واقف  في كمبوننت البيرنت وعايز اتاكد ان حصل انشاء لكمبوننت التشايلد
+- ngAfterViewChecked() بعد ما حصله تغيير بعد ما اشتغل بالكامل
+- *** ngOnDestroy() لما اعمل routing من صفحة للتانية يعمل destroy للكمبوننت ويظهر الكمبوننت اللي دخلت علي صفحته عشان ميخليش الاتنين كمبوننت شغالين ويلود من الميموري
+                    او لو حطيت property جديدة وعايز اشيلها لما اقفل الكمبوننت او ادخل صفحة تانية
+*** اكتر 3 استخدام
+
+
+viewChild نديلها كلاس الابن تشوفه مرة واحدة
